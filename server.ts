@@ -1,6 +1,14 @@
-// 1.Task: Array Filtering and Mapping
+//* 1.Task: Array Filtering and Mapping
 
-const people = [
+// Interface for personsData
+interface IPerson {
+  name: string;
+  age: number;
+  gender: "Male" | "Female";
+}
+
+// Data of people
+const people: IPerson[] = [
   {
     name: "Rahim Ahmed",
     age: 30,
@@ -28,4 +36,14 @@ const people = [
   },
 ];
 
+// getMaleNames function
+const getMaleNames = (peopleData: IPerson[]) => {
+  const filteredData = peopleData.filter(
+    (person) => person.gender !== "Female"
+  );
 
+  const result = filteredData.map((person) => person.name);
+  return result;
+};
+
+console.log(getMaleNames(people));
