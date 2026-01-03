@@ -81,7 +81,7 @@ const getBookTitles = (booksData: IBook[]): string[] => {
 };
 // console.log(getBookTitles(books));
 
-// * 3.Task: Function Composition
+//* 3.Task: Function Composition
 const getSquare = (num: number): number => {
   return num * num;
 };
@@ -129,7 +129,7 @@ const cars: ICar[] = [
 ];
 
 // sortCars function
-const sortCars = (carsData: ICar[]) => {
+const sortCars = (carsData: ICar[]): ICar[] => {
   const result = carsData.sort((a, b) => a.year - b.year);
   return result;
 };
@@ -165,7 +165,11 @@ const persons: IPerson[] = [
 ];
 
 // searchPerson
-const searchPerson = (personsData: IPerson[], name: string, age: number) => {
+const searchPerson = (
+  personsData: IPerson[],
+  name: string,
+  age: number
+): IPerson[] => {
   const person = personsData?.find((data) => data.name === name);
 
   if (person) {
@@ -173,4 +177,20 @@ const searchPerson = (personsData: IPerson[], name: string, age: number) => {
   }
   return personsData;
 };
-console.log(searchPerson(persons, "Rahim Ahmed", 35));
+// console.log(searchPerson(persons, "Rahim Ahmed", 35));
+
+//* 6.Task: Array Reduction
+const arrayOfNumber = [5, 6, 4, 5, 2, 3];
+
+// sumNums function
+const sumOfNumbers = (numbers: number[]): number => {
+  const result = numbers.reduce((sum, currentValue) => {
+    if (currentValue % 2 === 0) {
+      return sum + currentValue;
+    }
+    return sum;
+  }, 0);
+
+  return result;
+};
+console.log(sumOfNumbers(arrayOfNumber));
