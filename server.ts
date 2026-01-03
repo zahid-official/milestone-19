@@ -133,4 +133,44 @@ const sortCars = (carsData: ICar[]) => {
   const result = carsData.sort((a, b) => a.year - b.year);
   return result;
 };
-console.log(sortCars(cars));
+// console.log(sortCars(cars));
+
+//* 5.Task: Find and Modify
+const persons: IPerson[] = [
+  {
+    name: "Rahim Ahmed",
+    age: 30,
+    gender: "Male",
+  },
+  {
+    name: "Ayesha Khan",
+    age: 26,
+    gender: "Female",
+  },
+  {
+    name: "Tanvir Hossain",
+    age: 34,
+    gender: "Male",
+  },
+  {
+    name: "Nusrat Jahan",
+    age: 22,
+    gender: "Female",
+  },
+  {
+    name: "Sajid Hasan",
+    age: 40,
+    gender: "Male",
+  },
+];
+
+// searchPerson
+const searchPerson = (personsData: IPerson[], name: string, age: number) => {
+  const person = personsData?.find((data) => data.name === name);
+
+  if (person) {
+    person.age = age;
+  }
+  return personsData;
+};
+console.log(searchPerson(persons, "Rahim Ahmed", 35));
