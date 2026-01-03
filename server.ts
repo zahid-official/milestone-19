@@ -42,7 +42,16 @@ const getMaleNames = (peopleData: IPerson[]): string[] => {
   const result = filteredData.map((person) => person.name);
   return result;
 };
-// console.log(getMaleNames(people));
+console.log("Result of Task-1:", getMaleNames(people));
+
+
+
+
+
+
+
+
+
 
 //* 2.Task: Object Manipulation
 interface IBook {
@@ -79,7 +88,16 @@ const getBookTitles = (booksData: IBook[]): string[] => {
   const result = booksData.map((book) => book.title);
   return result;
 };
-// console.log(getBookTitles(books));
+console.log("Result of Task-2:", getBookTitles(books));
+
+
+
+
+
+
+
+
+
 
 //* 3.Task: Function Composition
 const getSquare = (num: number): number => {
@@ -96,7 +114,16 @@ const addFive = (num: number): number => {
 const composerFunction = (num: number): number => {
   return addFive(getDouble(getSquare(num)));
 };
-// console.log(composerFunction(2));
+console.log("Result of Task-3:", composerFunction(2));
+
+
+
+
+
+
+
+
+
 
 //* 4.Task: Sorting Objects
 interface ICar {
@@ -133,7 +160,16 @@ const sortCars = (carsData: ICar[]): ICar[] => {
   const result = carsData.sort((a, b) => a.year - b.year);
   return result;
 };
-// console.log(sortCars(cars));
+console.log("Result of Task-4:", sortCars(cars));
+
+
+
+
+
+
+
+
+
 
 //* 5.Task: Find and Modify
 const persons: IPerson[] = [
@@ -177,7 +213,16 @@ const searchPerson = (
   }
   return personsData;
 };
-// console.log(searchPerson(persons, "Rahim Ahmed", 35));
+console.log("Result of Task-5:", searchPerson(persons, "Rahim Ahmed", 35));
+
+
+
+
+
+
+
+
+
 
 //* 6.Task: Array Reduction
 const arrayOfNumber = [5, 6, 4, 5, 2, 3];
@@ -193,14 +238,23 @@ const sumOfNumbers = (numbers: number[]): number => {
 
   return result;
 };
-// console.log(sumOfNumbers(arrayOfNumber));
+console.log("Result of Task-6:", sumOfNumbers(arrayOfNumber));
+
+
+
+
+
+
+
+
+
 
 //* 7. Task: Leap Year Checker
-const isLeapYear = (year: number) => {
+const isLeapYear = (year: number):boolean => {
   if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
     return true;
   } else {
     return false;
   }
 };
-console.log(isLeapYear(1996));
+console.log("Result of Task-7:", isLeapYear(1996));
