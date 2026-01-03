@@ -92,9 +92,45 @@ const addFive = (num: number): number => {
   return num + 5;
 };
 
-// composer functin
+// composer function
 const composerFunction = (num: number): number => {
   return addFive(getDouble(getSquare(num)));
 };
+// console.log(composerFunction(2));
 
-console.log(composerFunction(2));
+//* 4.Task: Sorting Objects
+interface ICar {
+  make: string;
+  model: string;
+  year: number;
+}
+
+const cars: ICar[] = [
+  {
+    make: "Toyota",
+    model: "Corolla",
+    year: 2025,
+  },
+  {
+    make: "Honda",
+    model: "Civic",
+    year: 2018,
+  },
+  {
+    make: "Tesla",
+    model: "Model 3",
+    year: 2022,
+  },
+  {
+    make: "BMW",
+    model: "X5",
+    year: 2019,
+  },
+];
+
+// sortCars function
+const sortCars = (carsData: ICar[]) => {
+  const result = carsData.sort((a, b) => a.year - b.year);
+  return result;
+};
+console.log(sortCars(cars));
