@@ -42,7 +42,6 @@ const getMaleNames = (peopleData: IPerson[]): string[] => {
   const result = filteredData.map((person) => person.name);
   return result;
 };
-
 // console.log(getMaleNames(people));
 
 //* 2.Task: Object Manipulation
@@ -80,5 +79,22 @@ const getBookTitles = (booksData: IBook[]): string[] => {
   const result = booksData.map((book) => book.title);
   return result;
 };
+// console.log(getBookTitles(books));
 
-console.log(getBookTitles(books));
+// * 3.Task: Function Composition
+const getSquare = (num: number): number => {
+  return num * num;
+};
+const getDouble = (num: number): number => {
+  return num * 2;
+};
+const addFive = (num: number): number => {
+  return num + 5;
+};
+
+// composer functin
+const composerFunction = (num: number): number => {
+  return addFive(getDouble(getSquare(num)));
+};
+
+console.log(composerFunction(2));
